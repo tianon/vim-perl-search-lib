@@ -18,7 +18,7 @@ if executable('perl')
 		while 1
 			call cursor(s:maxPos == 0 ? 1 : s:maxPos, 1)
 			
-			let s:pos = search('^use\s\+\(lib\|File::Basename\|Cwd\)\s\+[^;]\+;$', 'n', s:maxSearchLines)
+			let s:pos = search('^use\s\+\(lib\|File::Basename\|Cwd\)\s\+[^;]\+;$', 'n', perl_search_lib_maxSearchLines)
 			if (s:pos <= s:maxPos)
 				break
 			endif
